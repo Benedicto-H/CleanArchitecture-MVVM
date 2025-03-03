@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Owner: Hashable {
+struct Owner: Equatable {
     
     let id: Int
     let name: String

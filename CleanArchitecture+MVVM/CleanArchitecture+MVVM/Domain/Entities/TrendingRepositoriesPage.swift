@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct TrendingRepositoriesPage: Hashable {
+struct TrendingRepositoriesPage: Equatable {
     let items: [Repository]
 }

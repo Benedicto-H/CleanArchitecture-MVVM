@@ -13,7 +13,7 @@ final class DataTransferServiceImpl {
     private let errorResolver: DataTransferErrorResolver
     private let errorLogger: DataTransferErrorLogger
     
-    init(networkService: NetworkService,
+    init(with networkService: NetworkService,
          errorResolver: DataTransferErrorResolver = DataTransferErrorResolverImpl(),
          errorLogger: DataTransferErrorLogger = DataTransferErrorLoggerImpl()) {
         
@@ -87,7 +87,6 @@ extension DataTransferServiceImpl: DataTransferServiceProvider {
     private func decode<T: Decodable>(data: Data?, decoder: ResponseDecoder) -> Result<T, DataTransferError> {
         
         do {
-            
             guard let data = data else { return .failure(.noResponse) }
             let result: T = try decoder.decode(data)
             return .success(result)

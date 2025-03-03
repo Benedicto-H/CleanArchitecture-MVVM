@@ -97,7 +97,7 @@ final class TrendingRepositoriesListTableViewController: UITableViewController {
     
     @objc func refresh(_ sender: Any) -> Void {
         
-        viewModel.viewDidLoad()
+        viewModel.viewDidRefresh()
         refreshControl?.endRefreshing()
         tableView.setContentOffset(.zero, animated: true)
     }

@@ -9,13 +9,12 @@ import Foundation
 
 final class TrendingRepositoriesRepositoryImpl {
     
-    private let dataTransferServiceProvider: DataTransferServiceProvider
+    private let dataTransferService: DataTransferServiceProvider
     private let cache: TrendingRepositoriesStorage
-    
-    init(dataTransferService: DataTransferServiceProvider,
-         cache: TrendingRepositoriesStorage) {
+
+    init(dataTransferService: DataTransferServiceProvider, cache: TrendingRepositoriesStorage) {
         
-        self.dataTransferServiceProvider = dataTransferService
+        self.dataTransferService = dataTransferService
         self.cache = cache
     }
 }
@@ -25,7 +24,7 @@ extension TrendingRepositoriesRepositoryImpl: TrendingRepositoriesRepository {
         
         let task = RepositoryTask()
         
-        cache.getTrendingRepositoriesPageDto { [cache, dataTransferServiceProvider] cacheResult in
+        cache.getTrendingRepositoriesPageDto { [cache, dataTransferService] cacheResult in
             
             let shouldFetchData: Bool
             
@@ -50,7 +49,7 @@ extension TrendingRepositoriesRepositoryImpl: TrendingRepositoriesRepository {
             
             let endpoint = APIEndpoints.getTrendingRepositories(requestQuery: TrendingRepositoriesRequestQuery())
             
-            task.networkTask = dataTransferServiceProvider.request(with: endpoint, completion: { result in
+            task.networkTask = dataTransferService.request(with: endpoint, completion: { result in
                 switch result {
                 case .success(let trendingRepositoriesPageDto):
                     cache.save(trendingRepositoriesPageDto: trendingRepositoriesPageDto)

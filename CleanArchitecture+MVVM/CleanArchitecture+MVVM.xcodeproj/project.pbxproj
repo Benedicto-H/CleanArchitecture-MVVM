@@ -27,9 +27,13 @@
 		930F893E2D64B031006187EE /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F893D2D64B031006187EE /* CoreDataStorage.swift */; };
 		930F89412D64B1D2006187EE /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 930F893F2D64B1D2006187EE /* CoreDataStorage.xcdatamodeld */; };
 		930F89432D64B4AD006187EE /* CoreDataImagesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F89422D64B4AD006187EE /* CoreDataImagesStorage.swift */; };
+		934978832D75C4670080808C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934978822D75C4670080808C /* AppConfiguration.swift */; };
+		934978852D75C4800080808C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934978842D75C4800080808C /* AppDIContainer.swift */; };
+		934978872D75C5CF0080808C /* TrendingRepositoriesFeatureDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934978862D75C5CF0080808C /* TrendingRepositoriesFeatureDIContainer.swift */; };
+		9349788A2D75C6EC0080808C /* TrendingRepositoriesFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934978892D75C6EC0080808C /* TrendingRepositoriesFlowCoordinator.swift */; };
+		9349788C2D75C74A0080808C /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9349788B2D75C74A0080808C /* AppFlowCoordinator.swift */; };
 		9361E5702D632EC200A9312F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E5662D632EC200A9312F /* AppDelegate.swift */; };
 		9361E5712D632EC200A9312F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E56D2D632EC200A9312F /* SceneDelegate.swift */; };
-		9361E5722D632EC200A9312F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E56E2D632EC200A9312F /* ViewController.swift */; };
 		9361E5732D632EC200A9312F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9361E5672D632EC200A9312F /* Assets.xcassets */; };
 		9361E5752D632EC200A9312F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9361E56A2D632EC200A9312F /* LaunchScreen.storyboard */; };
 		9361E57A2D632F5F00A9312F /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361E5792D632F5F00A9312F /* Owner.swift */; };
@@ -83,13 +87,17 @@
 		930F893D2D64B031006187EE /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		930F89402D64B1D2006187EE /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
 		930F89422D64B4AD006187EE /* CoreDataImagesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImagesStorage.swift; sourceTree = "<group>"; };
+		934978822D75C4670080808C /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		934978842D75C4800080808C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		934978862D75C5CF0080808C /* TrendingRepositoriesFeatureDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesFeatureDIContainer.swift; sourceTree = "<group>"; };
+		934978892D75C6EC0080808C /* TrendingRepositoriesFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesFlowCoordinator.swift; sourceTree = "<group>"; };
+		9349788B2D75C74A0080808C /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		9361E54E2D632EAE00A9312F /* CleanArchitecture+MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CleanArchitecture+MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9361E5662D632EC200A9312F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9361E5672D632EC200A9312F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9361E5682D632EC200A9312F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9361E5692D632EC200A9312F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9361E56D2D632EC200A9312F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9361E56E2D632EC200A9312F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9361E5792D632F5F00A9312F /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		9361E57B2D632F8600A9312F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9361E57D2D632FA800A9312F /* TrendingRepositoriesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesPage.swift; sourceTree = "<group>"; };
@@ -143,7 +151,9 @@
 		9301548A2D684D8F00913A64 /* TrendingRepositoriesFeature */ = {
 			isa = PBXGroup;
 			children = (
+				934978862D75C5CF0080808C /* TrendingRepositoriesFeatureDIContainer.swift */,
 				9301548B2D684DBB00913A64 /* TradingRepositoriesList */,
+				934978882D75C6DB0080808C /* Flows */,
 				93CCA7162D6DA45500526979 /* Localizations+TrendingRepositoriesFeature.swift */,
 				93CCA7432D6DC1D500526979 /* Images+TrendingRepositoriesFeature.swift */,
 			);
@@ -278,6 +288,45 @@
 			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
+		934978812D75BAFB0080808C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9361E5862D6333F700A9312F /* TrendingRepositoriesRepository.swift */,
+				9361E5882D63344A00A9312F /* ImagesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		934978882D75C6DB0080808C /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				934978892D75C6EC0080808C /* TrendingRepositoriesFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9349788D2D75D1800080808C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9361E5662D632EC200A9312F /* AppDelegate.swift */,
+				9361E56D2D632EC200A9312F /* SceneDelegate.swift */,
+				934978822D75C4670080808C /* AppConfiguration.swift */,
+				934978842D75C4800080808C /* AppDIContainer.swift */,
+				9349788B2D75C74A0080808C /* AppFlowCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9349788E2D75D1C40080808C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9361E5672D632EC200A9312F /* Assets.xcassets */,
+				9361E5682D632EC200A9312F /* Info.plist */,
+				9361E56A2D632EC200A9312F /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9361E5452D632EAE00A9312F = {
 			isa = PBXGroup;
 			children = (
@@ -297,17 +346,13 @@
 		9361E56F2D632EC200A9312F /* CleanArchitecture+MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				930154892D684D7A00913A64 /* Presentation */,
-				9361E5662D632EC200A9312F /* AppDelegate.swift */,
-				9361E5672D632EC200A9312F /* Assets.xcassets */,
-				9361E5682D632EC200A9312F /* Info.plist */,
-				9361E56A2D632EC200A9312F /* LaunchScreen.storyboard */,
-				9361E56D2D632EC200A9312F /* SceneDelegate.swift */,
-				9361E56E2D632EC200A9312F /* ViewController.swift */,
+				9349788D2D75D1800080808C /* Application */,
 				9361E5772D632F3700A9312F /* Domain */,
 				9361E58A2D6354C500A9312F /* Data */,
+				930154892D684D7A00913A64 /* Presentation */,
 				9361E5902D6355CF00A9312F /* Infrastructure */,
 				9361E5822D63310E00A9312F /* Common */,
+				9349788E2D75D1C40080808C /* Resources */,
 			);
 			path = "CleanArchitecture+MVVM";
 			sourceTree = "<group>";
@@ -352,8 +397,7 @@
 		9361E5852D6333CC00A9312F /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				9361E5862D6333F700A9312F /* TrendingRepositoriesRepository.swift */,
-				9361E5882D63344A00A9312F /* ImagesRepository.swift */,
+				934978812D75BAFB0080808C /* Repositories */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -458,8 +502,8 @@
 			isa = PBXGroup;
 			children = (
 				93CCA7412D6DB55500526979 /* TrendingRepositoriesListItemCell.swift */,
-				93CCA7492D6DDD5600526979 /* TrendingRepositoriesListEmptyItemCell.swift */,
 				93CCA74B2D6DDE2400526979 /* TrendingRepositoriesListLoadingItemCell.swift */,
+				93CCA7492D6DDD5600526979 /* TrendingRepositoriesListEmptyItemCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -549,6 +593,7 @@
 				930F89292D64A8E5006187EE /* TrendingRepositoriesRequestQuery.swift in Sources */,
 				930F89432D64B4AD006187EE /* CoreDataImagesStorage.swift in Sources */,
 				93CCA74E2D6DDE5F00526979 /* SkeletonLoadable.swift in Sources */,
+				934978872D75C5CF0080808C /* TrendingRepositoriesFeatureDIContainer.swift in Sources */,
 				93CCA7152D6DA30600526979 /* Error+UIError.swift in Sources */,
 				9361E57C2D632F8600A9312F /* Repository.swift in Sources */,
 				930F89362D64AD64006187EE /* ImagesStorage.swift in Sources */,
@@ -560,6 +605,7 @@
 				930154952D68548B00913A64 /* TrendingRepositoriesListContentViewModel.swift in Sources */,
 				9361E5892D63344A00A9312F /* ImagesRepository.swift in Sources */,
 				93CCA74A2D6DDD5600526979 /* TrendingRepositoriesListEmptyItemCell.swift in Sources */,
+				9349788C2D75C74A0080808C /* AppFlowCoordinator.swift in Sources */,
 				9362D7F52D65BC8900F331F4 /* RepositoryEntity+.swift in Sources */,
 				9361E5A12D63579F00A9312F /* Responsable.swift in Sources */,
 				93CCA74C2D6DDE2400526979 /* TrendingRepositoriesListLoadingItemCell.swift in Sources */,
@@ -567,8 +613,10 @@
 				930F89382D64ADFD006187EE /* ImagesRequestQuery.swift in Sources */,
 				93CCA7422D6DB55500526979 /* TrendingRepositoriesListItemCell.swift in Sources */,
 				930F89192D64A22A006187EE /* DataTransferServiceImpl.swift in Sources */,
+				9349788A2D75C6EC0080808C /* TrendingRepositoriesFlowCoordinator.swift in Sources */,
 				9361E57E2D632FA800A9312F /* TrendingRepositoriesPage.swift in Sources */,
 				930F89232D64A7D1006187EE /* TrendingRepositoriesStorage.swift in Sources */,
+				934978852D75C4800080808C /* AppDIContainer.swift in Sources */,
 				93CCA73C2D6DB0EE00526979 /* UIViewController+AddChild.swift in Sources */,
 				9362D7F72D65C5F400F331F4 /* TrendingRepositoriesPageEntity+.swift in Sources */,
 				9361E5A32D6357DB00A9312F /* Endpoint.swift in Sources */,
@@ -579,12 +627,12 @@
 				930154932D684F7400913A64 /* Observable.swift in Sources */,
 				930F89312D64AC29006187EE /* APIEndpoints.swift in Sources */,
 				93CCA7172D6DA45500526979 /* Localizations+TrendingRepositoriesFeature.swift in Sources */,
+				934978832D75C4670080808C /* AppConfiguration.swift in Sources */,
 				93CCA7122D6D9EE300526979 /* DispatchQueueType.swift in Sources */,
 				930F892D2D64A94F006187EE /* RepositoryDto.swift in Sources */,
 				9361E59A2D6356B700A9312F /* NetworkService.swift in Sources */,
 				93CCA7442D6DC1D500526979 /* Images+TrendingRepositoriesFeature.swift in Sources */,
 				930F893B2D64AF7F006187EE /* CoreDataTrendingRepositoriesStorage.swift in Sources */,
-				9361E5722D632EC200A9312F /* ViewController.swift in Sources */,
 				93CCA7462D6DDC4000526979 /* UITableView+DequeueReusableCell.swift in Sources */,
 				930154972D6854C900913A64 /* TrendingRepositoriesListItemViewModel.swift in Sources */,
 				930F89332D64AC92006187EE /* ImagesRepositoryImpl.swift in Sources */,
@@ -613,7 +661,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CleanArchitecture+MVVM/Info.plist";
+				INFOPLIST_FILE = "CleanArchitecture+MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -639,7 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CleanArchitecture+MVVM/Info.plist";
+				INFOPLIST_FILE = "CleanArchitecture+MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -10,6 +10,5 @@ import Foundation
 protocol TrendingRepositoriesRepository {
     /// Data Source와의 상호작용
     @discardableResult
-    func fetchTrendingRepositoriesList(cached: @escaping (TrendingRepositoriesPage) -> Void,
-                                       completion: @escaping (Result<TrendingRepositoriesPage, Error>) -> Void) -> Cancellable?
+    func fetchTrendingRepositoriesList(cached: @escaping (TrendingRepositoriesPage) -> Void, completion: @escaping (Result<TrendingRepositoriesPage, Error>) -> Void) -> Cancellable?
 }

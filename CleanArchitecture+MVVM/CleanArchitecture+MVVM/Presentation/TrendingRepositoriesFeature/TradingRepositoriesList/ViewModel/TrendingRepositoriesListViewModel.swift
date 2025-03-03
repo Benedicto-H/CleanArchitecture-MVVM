@@ -72,6 +72,7 @@ final class TrendingRepositoriesListViewModelImpl: TrendingRepositoriesListViewM
                 case .success(let page):
                     self?.update(page.items)
                 case .failure(let error):
+                    self?.handle(error: error)
                     self?.updateContent()
                 }
             }
@@ -84,10 +85,6 @@ final class TrendingRepositoriesListViewModelImpl: TrendingRepositoriesListViewM
         updateContent()
     }
     
-    private func updateContent() -> Void {
-        content.value = items.isEmpty ? .emptyData : .items(items)
-    }
-    
     private func handle(error: Error) -> Void {
         
         switch error.uiError {
@@ -98,16 +95,21 @@ final class TrendingRepositoriesListViewModelImpl: TrendingRepositoriesListViewM
             self.error.value = NSLocalizedString(Localizations.TrendingRepositoriesFeature.TrendingRepositoriesList.Errors.failedLoadingRepositoriesTitle, comment: "")
         }
     }
+    
+    private func updateContent() -> Void {
+        content.value = items.isEmpty ? .emptyData : .items(items)
+    }
 }
 
+// MARK: - INPUT. View event methods
 extension TrendingRepositoriesListViewModelImpl {
     
     func viewDidLoad() {
-        reload()
+        self.reload()
     }
     
     func viewDidRefresh() {
-        reload()
+        self.reload()
     }
     
     func viewDidSelectItem(at index: Int) {

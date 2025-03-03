@@ -242,23 +242,19 @@ final class TrendingRepositoriesListItemCell: UITableViewCell {
         ownerImageView.image = nil
         
         ownerImageUrl = imageUrl
-        
-        if let screen = window?.windowScene?.screen {
-            
-            let scale = screen.scale
-            
-            ownerImageLoadTask = imagesRepository.fetchImage(with: imageUrl, size: Int(Constants.ownerImageSize * scale), completion: { [weak self] result in
-                self?.mainQueue.async {
-                    
-                    defer { self?.ownerImageLoadTask = nil }
-                    
-                    guard self?.ownerImageUrl == imageUrl else { return }
-                    if case let .success(data) = result {
-                        self?.ownerImageView.image = UIImage(data: data)
-                    }
+        ownerImageLoadTask = imagesRepository.fetchImage(with: imageUrl,
+                                                         size: Int(Constants.ownerImageSize * UIScreen.main.scale), //  UITraitCollection.current.displayScale
+                                                         completion: { [weak self] result in
+            self?.mainQueue.async {
+                
+                defer { self?.ownerImageLoadTask = nil }
+                
+                guard self?.ownerImageUrl == imageUrl else { return }
+                if case let .success(data) = result {
+                    self?.ownerImageView.image = UIImage(data: data)
                 }
-            })
-        }
+            }
+        })
     }
     
 }

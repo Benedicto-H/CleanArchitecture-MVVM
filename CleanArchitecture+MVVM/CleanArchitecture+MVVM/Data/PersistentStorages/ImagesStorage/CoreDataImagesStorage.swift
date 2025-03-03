@@ -50,7 +50,6 @@ final class CoreDataImagesStorage {
         
         CoreDataStorage.shared.performBackgroundTask { context in
             do {
-                
                 let fetchRequest: NSFetchRequest = ImageEntity.fetchRequest()
                 let sort = NSSortDescriptor(key: #keyPath(ImageEntity.lastUsedAt), ascending: false)
                 
@@ -83,7 +82,6 @@ extension CoreDataImagesStorage: ImagesStorage {
         
         coreDataStorage.performBackgroundTask { context in
             do {
-                
                 let fetchRequest = self.fetchRequest(for: urlPath)
                 let entity = try context.fetch(fetchRequest).first
                 
@@ -102,7 +100,6 @@ extension CoreDataImagesStorage: ImagesStorage {
         
         coreDataStorage.performBackgroundTask { context in
             do {
-                
                 self.deleteImage(for: urlPath, in: context)
                 
                 let entity: ImageEntity = .init(context: context)

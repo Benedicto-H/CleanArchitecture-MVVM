@@ -9,22 +9,20 @@ import Foundation
 
 protocol FetchTrendingRepositoriesUseCase: AnyObject {
     /// Business Logic 정의
-    func fetch(cached: @escaping (TrendingRepositoriesPage) -> Void,
-               completion: @escaping (Result<TrendingRepositoriesPage, Error>) -> Void) -> Cancellable?
+    func fetch(cached: @escaping (TrendingRepositoriesPage) -> Void, completion: @escaping (Result<TrendingRepositoriesPage, Error>) -> Void) -> Cancellable?
 }
 
 final class FetchTrendingRepositoriesUseCaseImpl: FetchTrendingRepositoriesUseCase {
-    
+
     private let trendingRepositoriesRepository: TrendingRepositoriesRepository
-    
+
     init(trendingRepositoriesRepository: TrendingRepositoriesRepository) {
         self.trendingRepositoriesRepository = trendingRepositoriesRepository
     }
 }
 
 extension FetchTrendingRepositoriesUseCaseImpl {
-    func fetch(cached: @escaping (TrendingRepositoriesPage) -> Void,
-               completion: @escaping (Result<TrendingRepositoriesPage, any Error>) -> Void) -> (any Cancellable)? {
+    func fetch(cached: @escaping (TrendingRepositoriesPage) -> Void, completion: @escaping (Result<TrendingRepositoriesPage, Error>) -> Void) -> Cancellable? {
         self.trendingRepositoriesRepository.fetchTrendingRepositoriesList(cached: cached, completion: completion)
     }
 }

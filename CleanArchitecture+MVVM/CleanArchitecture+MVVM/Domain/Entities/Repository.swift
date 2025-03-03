@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repository: Hashable {
+struct Repository: Equatable {
     
     let id: Int
     let owner: Owner

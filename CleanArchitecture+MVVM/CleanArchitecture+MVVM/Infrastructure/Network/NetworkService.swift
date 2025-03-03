@@ -170,7 +170,6 @@ extension NetworkServiceImpl: NetworkService {
     func request(endpoint: any Requestable, completion: @escaping CompletionHandler) -> (any NetworkCancellable)? {
         
         do {
-            
             let urlRequest = try endpoint.urlRequest(with: config)
             return request(request: urlRequest, completion: completion)
         } catch {

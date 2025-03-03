@@ -40,7 +40,6 @@ final class CoreDataTrendingRepositoriesStorage {
         let request = fetchTrendingRepositoriesPageRequest()
 
         do {
-            
             if let result = try context.fetch(request).first {
                 context.delete(result)
             }
@@ -56,7 +55,6 @@ extension CoreDataTrendingRepositoriesStorage: TrendingRepositoriesStorage {
         
         coreDataStorage.performBackgroundTask { context in
             do {
-                
                 let fetchRequest: NSFetchRequest = self.fetchTrendingRepositoriesPageRequest()
                 let entity = try context.fetch(fetchRequest).first
                 let entityDto = try entity?.toDto()
@@ -78,7 +76,6 @@ extension CoreDataTrendingRepositoriesStorage: TrendingRepositoriesStorage {
         
         coreDataStorage.performBackgroundTask { context in
             do {
-                
                 self.deleteTrendingRepositoriesPageDto(in: context)
 
                 let entity = trendingRepositoriesPageDto.toEntity(in: context)

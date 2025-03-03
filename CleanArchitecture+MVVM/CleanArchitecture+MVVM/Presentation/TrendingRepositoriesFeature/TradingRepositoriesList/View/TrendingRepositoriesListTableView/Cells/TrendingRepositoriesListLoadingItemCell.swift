@@ -106,10 +106,11 @@ final class TrendingRepositoriesListLoadingItemCell: UITableViewCell, SkeletonLo
         
         let reponameGroup = makeAnimationGroup(previousGroup: ownerImageGroup)
         reponameGroup.beginTime = 0.0
+        
         repositoryNameLayer.add(reponameGroup, forKey: "backgroundColor")
     }
     
-    private func setupViewLayout() {
+    private func setupViewLayout() -> Void {
         
         [ownerImageView, horizontalStack].forEach { contentView.addSubview($0) }
         

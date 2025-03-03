@@ -11,7 +11,8 @@ final class TrendingRepositoriesListViewController: UIViewController {
 
     private var viewModel: TrendingRepositoriesListViewModel
     private let imagesRepository: ImagesRepository
-    private lazy var itemsTableViewController = TrendingRepositoriesListTableViewController(viewModel: viewModel, imagesRepository: imagesRepository)
+    private lazy var itemsTableViewController = TrendingRepositoriesListTableViewController(viewModel: viewModel,
+                                                                                            imagesRepository: imagesRepository)
     
     // MARK: - Lifecycle
     init(viewModel: TrendingRepositoriesListViewModel, imagesRepository: ImagesRepository) {
@@ -33,6 +34,7 @@ final class TrendingRepositoriesListViewController: UIViewController {
         setupLocalizations()
         setupViewLayout()
         bind(to: viewModel)
+        viewModel.viewDidLoad()
     }
     
     // MARK: - Private
